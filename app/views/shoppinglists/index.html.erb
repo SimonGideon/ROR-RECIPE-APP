@@ -1,0 +1,28 @@
+<%= stylesheet_link_tag "shop", "data-turbo-track": "reload" %>
+<section>
+  <h1>Shopping List</h1>
+  <div class="shop-container">
+    <div class="shop-hero">
+      <p>Amount of food item to buy: <%= @food_counts %></p>
+      <p>Total value of food needed: $ <%= @food_prices %></p>
+    </div>
+    <table>
+      <thead>
+        <tr>
+          <th>Food</th>
+          <th>Quantity</th>
+          <th>Price</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @food.each do |food| %>
+          <tr>
+            <td><%= food.name %></td>
+            <td><%= food.quantity %></td>
+            <td><%= food.price %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+</section>

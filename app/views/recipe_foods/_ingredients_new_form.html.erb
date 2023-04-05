@@ -1,0 +1,14 @@
+<%= render 'shared/menu'%>
+<%= form_with model: recipe_food, url: url, class: "my-3" do |f| %>
+  <div class="mb-3">
+    <%= f.label :quantity, "Quantity", style: "display: block" %>
+    <%= f.number_field :quantity, placeholder: 0 %>
+  </div>
+
+  <div class="mb-3">
+    <%= f.label :food_id, "Food", style: "display: block" %>
+    <%= f.collection_select(:food_id, foods, :id, :name) %>
+  </div>
+
+  <%= f.submit "Add ingredients", class: "create-btn btn" %>
+<% end %>

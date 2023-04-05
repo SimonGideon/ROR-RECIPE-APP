@@ -1,0 +1,48 @@
+.shop-container {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  margin: auto;
+}
+
+.shop-hero {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0 3rem;
+}
+
+/* public recipe */
+.recipe-public {
+  margin-left: 200px;
+}
+
+.recipe-public a {
+  text-decoration: none;
+}
+
+.public-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.card-body {
+  margin: auto;
+  border: 1px solid black;
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  margin-bottom: 1rem;
+}
+
+.sub-public {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.sub-public > * {
+  margin: 0.5rem;
+  padding: 2px 0.5rem;
+  width: 100%;
+}
