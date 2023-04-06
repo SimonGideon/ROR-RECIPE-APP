@@ -138,3 +138,24 @@ input:checked + .slider::before {
 form {
   border: none;
 }
+
+a {
+  text-decoration: none;
+}
+
+.btn {
+  border: none;
+  background-color: #ffa500;
+  padding: 0.7rem 1.7rem;
+  margin: 1.5rem 2px;
+  border-radius: 5px;
+}
+
+.btn:hover {
+  background-color: #1ed760;
+}
+
+.controls :nth-child(2) {
+  background-color: #e9e3e3;
+  color: #1ed760;
+}

@@ -63,3 +63,9 @@
   color: #f2f2f2;
   cursor: pointer;
 }
+
+.navbar p {
+  color: white;
+  font-size: smaller;
+  text-align: center;
+}
