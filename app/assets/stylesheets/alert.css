@@ -1,0 +1,13 @@
+/* error message */
+.alert,
+.notice {
+  border-left: 3px solid #45a049;
+  border-radius: 5px;
+  width: 30%;
+  margin: auto;
+  box-shadow: rgba(218, 15, 116, 0.76) 2.4px 2.4px 3.2px;
+  text-align: center;
+  margin-bottom: 1px;
+  animation: zoom-out 2s ease infinite;
+  padding: 2px;
+}

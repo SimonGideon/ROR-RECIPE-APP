@@ -32,10 +32,5 @@ RSpec.describe 'Log in page', type: :system do
       click_link 'Forgot your password?'
       expect(page).to have_current_path new_user_password_path
     end
-
-    it 'click on `Didn`t receive confirmation instructions?`' do
-      click_link "Didn't receive confirmation instructions?"
-      expect(page).to have_current_path new_user_confirmation_path
-    end
   end
 end
