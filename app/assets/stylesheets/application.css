@@ -179,3 +179,15 @@ input[type="submit"]:hover {
   grid-area: notice;
   display: none;
 }
+
+.brand {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10%;
+  color: white;
+}
+
+.chef {
+  width: 50%;
+}
