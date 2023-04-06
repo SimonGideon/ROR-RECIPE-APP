@@ -29,7 +29,7 @@ class RecipesController < ApplicationController
       redirect_to recipe_path(id: @recipe.id)
     else
       flash.now[:alert] = @recipe.errors.full_messages.first if @recipe.errors.any?
-      render :new, status: unprocessable_entity
+      render :new, status: 422
     end
   end
 
