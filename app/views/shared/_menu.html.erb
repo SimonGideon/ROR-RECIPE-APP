@@ -1,0 +1,25 @@
+<%= stylesheet_link_tag "menu", "data-turbo-track": "reload" %>
+<nav class="navbar" >
+  <div class="brand">
+    <%= image_tag ("logo.png"), class: "chef" %>
+    <a class="navbar-brand" href="/">RECIPE APP</a>
+  </div>
+  <div class="collapse navbar-collapse" id="navbarText">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="/">Foods</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/recipes">Recipes</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/public_recipes">Public</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/shoppinglists">ShoppingList</a>
+        </li>
+      </ul>
+      <%= button_to("Log Out", destroy_user_session_path, method: :delete) %>
+      <p>Logged as: <%= @current_user.name %></p>
+  </div>
+</nav>

@@ -1,7 +1,8 @@
 require 'test_helper'
 
-class FoodsControllerTest < ActionDispatch::IntegrationTest
-  # test "the truth" do
-  #   assert true
-  # end
+class FoodControllerTest < ActionDispatch::IntegrationTest
+  test 'should get recipe_food' do
+    get food_recipe_food_url
+    assert_response :success
+  end
 end

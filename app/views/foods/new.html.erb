@@ -1,0 +1,23 @@
+<%= render 'shared/menu'%>
+<h1>New Food</h1>
+<%= form_for @food do |f| %>
+  <div class="form-element">
+    <%= f.label :name %>
+    <%= f.text_field :name, required: true %>
+  </div>
+  <div class="form-element">
+    <%= f.label :quantity %>
+    <%= f.number_field :quantity %>
+  </div>
+  <div class="form-element">
+    <%= f.label :price %>
+    <%= f.number_field :price, required: true %>
+  </div>
+  <div class="form-element">
+    <%= f.label :measurement_unit %>
+    <%= f.text_field :measurement_unit, required: true %>
+  </div>
+  <div>
+    <%= f.submit %>
+  </div>
+<% end %>
