@@ -1,0 +1,51 @@
+<%= render 'shared/menu'%>
+<%= stylesheet_link_tag "recipe", "data-turbo-track": "reload" %>
+<section class="recipe-show">
+<h1><%= @recipe.name %></h1>
+    <div class="food-container">
+        <div class="food-name">
+            <p>Preparation time:<%= @recipe.preparation_time  %>hours</p>
+            <p>Cooking time: <%= @recipe.cooking_time %></p>
+            <p>Description: <%= @recipe.description%></p>  
+        </div>
+<%= form_for @recipe, url: toggle_public_path(id: @recipe.id), method: :post do |f| %>
+  <div class="swith-btn">
+    <p><%= @recipe.public? ? 'Public' : 'Private' %></p>
+    <label class="switch">
+    <div><%= f.submit "" %></div>
+      <%= f.check_box :public, { checked: @recipe.public } %>
+      <span class="slider round"></span>
+    </label>
+  </div>
+  
+<% end %>
+
+    </div>
+    <div class="recipe-btns">
+        <%= link_to 'Generate Shopping List', shoppinglists_path(), class: 'button' %>
+        <%= link_to 'Add ingredient', new_recipe_recipe_food_path(recipe_id: @recipe.id), class: 'button' %>
+    </div>
+    <table>
+  <thead>
+    <tr>
+      <th>Food</th>
+      <th>Quantity</th>
+      <th>Value</th>
+      <th class="action">Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @recipe_foods.includes(:food).each do |recipe_food| %>
+      <tr>
+        <td><%= recipe_food.food.name %></td>
+        <td><%= recipe_food.quantity %> <%= recipe_food.food.measurement_unit%></td>
+        <td>$ <%= recipe_food.food.price %></td>
+        <td>
+            <%= link_to 'Delete', recipe_recipe_food_path(recipe_id: @recipe.id, id: recipe_food.id), data: { turbo_method: :delete }, class: 'delete-btn' %>
+            <%= link_to 'Modify', edit_recipe_recipe_food_path(recipe_id: @recipe.id, id: recipe_food.id), class: ' delete-btn modify-btn' %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+</section>

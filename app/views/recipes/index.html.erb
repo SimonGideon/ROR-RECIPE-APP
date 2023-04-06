@@ -1,0 +1,33 @@
+<%= render 'shared/menu'%>
+<%= stylesheet_link_tag "recipe", "data-turbo-track": "reload" %>
+<section class="recipe-section">
+<h1>All recipes</h1>
+<div class="recipe-container">
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @recipes.each do |recipe| %>
+      <tr>
+        <td><%= recipe.name %></td>
+        <td><%= recipe.description %></td>
+        <td><%= link_to 'View', recipe_path(id: recipe.id), class: 'preview-btn' %></td>
+        <td><%= link_to 'Delete', recipe_path(id: recipe.id), data: { turbo_method: :delete, turbo_confirm: 'Delete the recipe?' }, class: 'delete-btn' %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+</div>
+<div class="controls">
+  <button type="button" class="btn"><%= link_to "Add a new recipe", new_recipe_path %></button>
+  <button type="button" class="btn"><%= link_to "Go to public recipes", public_recipes_path %></button>
+</div>
+
+</section>
+
+

@@ -1,0 +1,71 @@
+.main {
+  padding: 0 10px;
+  width: 100%;
+}
+
+.navbar {
+  height: 100%;
+  width: 200px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: blue;
+  overflow-x: hidden;
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.navbar form {
+  border: none;
+}
+
+.navbar li {
+  list-style: none;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #f2f2f2;
+  text-align: center;
+  font-size: 17px;
+}
+
+.navbar li a::after {
+  content: "";
+  display: block;
+  height: 3px;
+  width: 0;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0), white, white, rgba(255, 255, 255, 0));
+  transition: width 0.5s ease-out;
+}
+
+.navbar li a:hover::after,
+.navbar li a:active::after,
+.navbar li a:focus::after {
+  width: 100%;
+}
+
+.navbar-nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+/* button */
+.button_to button {
+  border: none;
+  background-color: #f44336;
+  padding: 0.4rem 1.1rem;
+  margin: 1px 0;
+  color: #f2f2f2;
+  cursor: pointer;
+}
+
+.navbar p {
+  color: white;
+  font-size: smaller;
+  text-align: center;
+}

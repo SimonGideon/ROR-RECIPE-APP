@@ -1,0 +1,193 @@
+/* index */
+.mainbg {
+  background-image: url("background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+table {
+  border-collapse: collapse;
+  border: 2px solid rgb(155, 147, 147);
+}
+
+th,
+td {
+  padding: 8px;
+  text-align: left;
+}
+
+tr:first-child {
+  border-top: 1px solid rgb(155, 148, 148);
+}
+
+th,
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+tr:nth-child(odd) {
+  background-color: #fff;
+}
+
+.button {
+  background-color: #ffa500;
+  padding: 0.7rem 1.7rem;
+  margin: 1.5rem 2px;
+}
+
+.button,
+.preview-btn,
+.delete-btn {
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.delete-btn {
+  background-color: #f44336;
+  padding: 0.2rem 1.1rem;
+  margin: 1px 0;
+}
+
+.preview-btn {
+  background-color: #5d596b;
+  padding: 0.2rem 1.1rem;
+  margin: 1px 0;
+}
+
+/* new food form */
+form {
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.log-in {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10%;
+  color: white;
+}
+
+h1 {
+  text-align: center;
+}
+
+label {
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="number"] {
+  width: 95%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+input[type="submit"] {
+  padding: 10px;
+  margin-top: 20px;
+  background-color: #ffa500;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+.index-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.index-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  width: 70%;
+}
+
+.log-in form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  width: 300px;
+  color: white;
+  background-color: #1a1a1a;
+}
+
+.log-in form .field {
+  width: 100%;
+}
+
+.log-in form .field input[type="password"],
+.log-in form .field input[type="email"],
+.log-in form .field input[type="text"],
+.log-in input[type="number"] {
+  width: 95%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* error message */
+
+.alert,
+.notice,
+#error_explanation {
+  border-left: 3px solid #45a049;
+  border-radius: 5px;
+  width: 32%;
+  margin: auto;
+  box-shadow: rgba(218, 15, 116, 0.76) 2.4px 2.4px 3.2px;
+  text-align: center;
+  margin-bottom: 1px;
+  animation: zoom-out 2s ease infinite;
+  padding: 2px;
+  margin-top: 5px;
+}
+
+.notice {
+  box-shadow: none;
+}
+
+.alert:empty {
+  grid-area: alert;
+  display: none;
+}
+
+.notice:empty {
+  grid-area: notice;
+  display: none;
+}
+
+.brand {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10%;
+  color: white;
+}
+
+.chef {
+  width: 50%;
+}

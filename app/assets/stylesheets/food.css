@@ -1,0 +1,17 @@
+/* recipe */
+.food-section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.food-section .add-button {
+  margin-right: 15%;
+}
+
+.food-container {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  margin: auto;
+}
