@@ -11,7 +11,7 @@ gem 'devise'
 gem 'cancancan'
 
 # ruby version
-ruby '2.6.8'
+ruby '3.0.2'
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem 'rails', '~> 7.0.4', '>= 7.0.4.3'
