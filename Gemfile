@@ -1,6 +1,4 @@
-source 'https://rubygems.org'
-git_source(:github) { |repo| "https://github.com/#{repo}.git" }
-
+source "https://rubygems.org"
 # rubocop
 gem 'rubocop', '>= 1.0', '< 2.0'
 
